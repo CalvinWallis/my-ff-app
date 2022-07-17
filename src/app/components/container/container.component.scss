@@ -1,0 +1,10 @@
+@import "../../../styles/variables.scss";
+
+.container {
+    display: block;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: linear-gradient(to bottom left, $color-blue-ul, $color-blue-ll), linear-gradient(to bottom right, $color-blue-ur, $color-blue-lr);
+    color: white;
+}
