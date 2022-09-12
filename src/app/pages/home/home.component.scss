@@ -25,6 +25,7 @@ a {
   color: $color-black;
   
   &:focus, &:hover {
+    outline: none;
     text-decoration: underline;
   }
 }
