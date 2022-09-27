@@ -14,7 +14,7 @@
   "main menustart menuend"
   "main menustart menuend"
   "main menustart menuend"
-  "main menustart menuend"
+  "main menustart ."
   "main . ."
   "main submenu submenu"
   ". submenu submenu";
@@ -28,15 +28,34 @@
 
 .layout-menu {
   grid-area: menustart / menustart / menuend / menuend;
-  padding: 3rem;
-
-  & a {
-    display: block;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
 }
 
 .layout-submenu {
   grid-area: submenu;
+}
+
+.menu-item {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+
+  &:focus, &:hover {
+    outline: none;
+  }
+
+  &:focus::before, &:hover::before {
+    content: '>';
+    position: absolute;
+    left: -.5rem;
+  }
+
+  &__break {
+    margin-bottom: 3rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
