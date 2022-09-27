@@ -7,9 +7,36 @@
 .layout {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 30%;
-  grid-template-rows: auto;
-  grid-template-areas: "main menu";
+  grid-template-columns: 1fr 5% 15%;
+  grid-template-rows: 3% repeat(7, 1fr);
+  grid-template-areas: 
+  ". menustart menuend"
+  "main menustart menuend"
+  "main menustart menuend"
+  "main menustart menuend"
+  "main menustart menuend"
+  "main . ."
+  "main submenu submenu"
+  ". submenu submenu";
   padding: 1rem;
   height: 100%;
+}
+
+.layout-main {
+  grid-area: main / main / main / menustart;
+}
+
+.layout-menu {
+  grid-area: menustart / menustart / menuend / menuend;
+  padding: 3rem;
+
+  & a {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.layout-submenu {
+  grid-area: submenu;
 }
