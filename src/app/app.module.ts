@@ -14,7 +14,7 @@ import { MenuItemDirective } from './directives/menu-item.directive';
     ContainerComponent,
     HomeComponent,
     MainMenuComponent,
-    MenuItemDirective
+    MenuItemDirective,
   ],
   imports: [
     BrowserModule,
