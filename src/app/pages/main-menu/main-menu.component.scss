@@ -1,6 +1,8 @@
 @import "../../../styles/variables.scss";
 
 :host {
+  --stat-bar-width: 165px;
+  --party-image-width: 155px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -21,10 +23,9 @@
   "main submenu submenu"
   ". submenu submenu";
   padding: 1rem;
-  width: 75%;
-  max-width: 1600px;
-  min-width: 992px;
-  margin: 0 auto;
+  width: 1280px;
+  height: 960px;
+  margin: auto;
   aspect-ratio: 4 / 3;
 }
 
@@ -42,18 +43,10 @@
 
 .menu-item {
   display: block;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   padding-left: 2rem;
   position: relative;
-
-  @media (min-width: 1510px) {
-    font-size: 2rem;
-  }
-
-  @media (min-width: 2000px) {
-    font-size: 3rem;
-  }
 
   &:focus, &:hover {
     outline: none;
@@ -66,10 +59,7 @@
   }
 
   &__break {
-    margin-bottom: 2rem;
-    @media (min-width: 1510px) {
-      margin-bottom: 3rem;
-    }
+    margin-bottom: 4rem;
   }
 
   &:last-of-type {
@@ -78,36 +68,108 @@
 }
 
 .party {
-  padding: 2.5rem 5rem;
+  padding: 2.5rem 3.5rem;
 }
 
 .party-member {
   display: flex;
   gap: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 3.5rem;
 
   &__image {
-    margin-right: 108px;
+    margin-right: 78px;
   }
 
   &__name {
     margin-bottom: 1rem;
     display: block;
-    @media (min-width: 2000px) {
-      font-size: 3rem;
+  }
+
+
+  &__stats{
+    display: grid;
+    grid-template-columns: max-content var(--stat-bar-width);
+
+    & dt {
+      color: $color-blue-light;
+      font-weight: 600;
+    }
+
+    & dd {
+      margin-left: .5rem;
+      margin-bottom: .25rem;
+      padding: 0 .25rem .25rem 1rem;
+      position: relative;
+      
+    }
+
+    & span {
+      position: absolute;
+      right: 0;
     }
   }
 
-
-  &__stat {
-    color: $color-blue-light;
-    font-weight: 600;
+  &__stat-value--HP {
+    &::after {
+      background: linear-gradient(0.25turn, #3775c8, #3775c8, #c4bfc6);
+      content: '';
+      display: block;
+      height: .25rem;
+      left: 0;
+      position: absolute;
+      margin-top: .25rem;
+      width: var(--stat-bar-width);
+    }
   }
 
-  &__stat-value {
-    border-bottom: 4px solid purple;
-    font-size: 2.75rem;
-    margin-bottom: .25rem;
+  &__stat-value--MP {
+    &::after {
+      background: linear-gradient(0.25turn, #53cfad, #53cfad, #bfc3cf);
+      content: '';
+      display: block;
+      height: .25rem;
+      left: 0;
+      margin-top: .25rem;
+      position: absolute;
+      width: var(--stat-bar-width);
+    }
+  }
+
+  &__progress {
+    flex-grow: 1;
+  }
+
+  &__experience {
+    height: 2rem;
+    width: 340px;
+    background-color: white;
+    margin-left: 2rem; 
+    position: relative;
+    left: 0;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1.5rem;
+      background-color: purple;
+      position: absolute;     
+      top: .25rem;
+      left: .5rem;
+      right: .5rem;
+      width: 50%;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1.5rem;
+      background-color: gray;
+      position: absolute;     
+      top: .25rem;
+      left: .5rem;
+      right: .5rem;
+    }
+   
   }
 }
