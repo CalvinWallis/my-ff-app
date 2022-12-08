@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-shadow: 3px 3px 1px black;
 }
 
 .layout {
@@ -140,36 +141,4 @@
     flex-grow: 1;
   }
 
-  &__experience {
-    height: 2rem;
-    width: 340px;
-    background-color: white;
-    margin-left: 2rem; 
-    position: relative;
-    left: 0;
-
-    &::after {
-      content: '';
-      display: block;
-      height: 1.5rem;
-      background-color: purple;
-      position: absolute;     
-      top: .25rem;
-      left: .5rem;
-      right: .5rem;
-      width: 50%;
-    }
-
-    &::before {
-      content: '';
-      display: block;
-      height: 1.5rem;
-      background-color: gray;
-      position: absolute;     
-      top: .25rem;
-      left: .5rem;
-      right: .5rem;
-    }
-   
-  }
 }
