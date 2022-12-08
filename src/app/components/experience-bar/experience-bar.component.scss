@@ -1,0 +1,158 @@
+:host {
+  --experience-level: 50%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.experience {
+    height: 2rem;
+    width: 340px;
+    background: linear-gradient(to bottom, #cdcdcd 50%, #acacac 70%);
+    margin-left: 2rem; 
+    position: relative;
+    box-shadow: 2px 2px 0 2px black;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1.5rem;
+      background: linear-gradient(to bottom, rgba(96, 42, 42, 1) 10%, rgba(155, 81, 81, 1) 25%, rgba(218, 200, 200, 1) 50%, rgba(234, 156, 156, 1) 75%, rgba(234, 146, 146, 1) 100%);
+      position: absolute;     
+      top: .25rem;
+      left: .5rem;
+      right: .5rem;
+      width: var(--experience-level);
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1.5rem;
+      background: linear-gradient(to bottom, #181818 10%, #393939 25%, #5a5a5a 50%, #6a6a6a 100%);
+      border-left: 4px solid #181818;
+      border-right: 4px solid #181818;
+      clip-path: inset(0px -15px 0px -15px);
+      position: absolute;     
+      top: .25rem;
+      left: .5rem;
+      right: .5rem;
+    }
+  }
+
+
+
+  @keyframes overlimit {
+    0% {
+      background: linear-gradient(to bottom, rgba(96, 42, 42, 1) 10%, rgba(155, 81, 81, 1) 25%, rgba(218, 200, 200, 1) 50%, rgba(234, 156, 156, 1) 75%, rgba(234, 146, 146, 1) 100%);
+    }
+    16% {
+      background: linear-gradient(to bottom, rgba(96, 88, 42, 1) 10%, rgba(155, 144, 81, 1) 25%, rgba(218, 215, 200, 1) 50%, rgba(234, 223, 156, 1) 75%, rgba(234, 221, 146, 1) 100%);
+    }
+    32% {
+      background: linear-gradient(to bottom, rgba(57, 96, 42, 1) 10%, rgba(102, 155, 81, 1) 25%, rgba(205, 218, 200, 1) 50%, rgba(178, 234, 156, 1) 75%, rgba(171, 234, 146, 1) 100%);
+    }
+    48% {
+      background: linear-gradient(to bottom, rgba(42, 96, 73, 1) 10%, rgba(81, 155, 123, 1) 25%, rgba(200, 218, 210, 1) 50%, rgba(156, 234, 201, 1) 75%, rgba(146, 234, 196, 1) 100%);
+    }    
+    64% {
+      background: linear-gradient(to bottom, rgba(42, 73, 96, 1) 10%, rgba(81, 123, 155, 1) 25%, rgba(200, 210, 218, 1) 50%, rgba(156, 201, 234, 1) 75%, rgba(146, 196, 234, 1) 100%);
+    }
+    80% {
+      background: linear-gradient(to bottom, rgba(57, 42, 96, 1) 10%, rgba(102, 81, 155, 1) 25%, rgba(205, 200, 218, 1) 50%, rgba(178, 156, 234, 1) 75%, rgba(171, 146, 234, 1) 100%);
+    }
+    100% {
+      background: linear-gradient(to bottom, rgba(96, 42, 88, 1) 10%, rgba(155, 81, 144, 1) 25%, rgba(218, 200, 215, 1) 50%, rgba(234, 156, 223, 1) 75%, rgba(234, 146, 221, 1) 100%);
+    }
+  }
+  
+
+
+
+
+
+  .experience-label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  
+  .xp10 {
+    --experience-level: 10%;
+  }
+
+  .xp15 {
+    --experience-level: 15%;
+  }
+
+  .xp20 {
+    --experience-level: 20%;
+  }
+
+  .xp25 {
+    --experience-level: 25%;
+  }
+
+  .xp30 {
+    --experience-level: 30%;
+  }
+
+  .xp35 {
+    --experience-level: 35%;
+  }
+
+  .xp40 {
+    --experience-level: 40%;
+  }
+
+  .xp45 {
+    --experience-level: 45%;
+  }
+
+  .xp50 {
+    --experience-level: 50%;
+  }
+
+  .xp55 {
+    --experience-level: 55%;
+  }
+
+  .xp60 {
+    --experience-level: 60%;
+  }
+
+  .xp65 {
+    --experience-level: 65%;
+  }
+
+  .xp70 {
+    --experience-level: 70%;
+  }
+
+  .xp75 {
+    --experience-level: 75%;
+  }
+
+  .xp80 {
+    --experience-level: 80%;
+  }
+
+  .xp85 {
+    --experience-level: 85%;
+  }
+
+  .xp90 {
+    --experience-level: 90%;
+  }
+
+  .xp95 {
+    --experience-level: 95%;
+  }
+
+  .xp100 {
+    --experience-level: 95%;
+  }
+
+  .xp100::after {
+    animation-name: overlimit;
+    animation-duration: .3s;
+    animation-iteration-count: infinite;
+  }

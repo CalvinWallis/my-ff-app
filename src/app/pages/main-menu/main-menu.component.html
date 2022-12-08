@@ -14,8 +14,8 @@
           </dl>
         </div>
         <div class="party-member__progress">
-          <span class="party-member__experience-label">next level</span>
-          <div class="party-member__experience"></div>
+          <app-experience-bar></app-experience-bar>
+          <app-experience-bar [barType]="'limit'" experienceLevel="xp10"></app-experience-bar>
         </div>
       </div>
       <div class="party-member">
@@ -30,7 +30,10 @@
             <dt>MP</dt><dd class="party-member__stat-value--MP">48/<span>48</span></dd>
           </dl>
         </div>
-        <div class="party-member__progress">Bars go here</div>
+        <div class="party-member__progress">
+          <app-experience-bar experienceLevel="xp75"></app-experience-bar>
+          <app-experience-bar [barType]="'limit'" experienceLevel="xp65"></app-experience-bar>
+        </div>
       </div>
       <div class="party-member">
         <div class="party-member__image">
@@ -44,7 +47,10 @@
             <dt>MP</dt><dd class="party-member__stat-value--MP">48/<span>48</span></dd>
           </dl>
         </div>
-        <div class="party-member__progress">Bars go here</div>
+        <div class="party-member__progress">
+          <app-experience-bar experienceLevel="xp15"></app-experience-bar>
+          <app-experience-bar [barType]="'limit'" experienceLevel="xp100"></app-experience-bar>
+        </div>
       </div>
     </div>
   </app-container>

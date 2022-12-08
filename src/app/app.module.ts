@@ -7,6 +7,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 import { MenuItemDirective } from './directives/menu-item.directive';
+import { ExperienceBarComponent } from './components/experience-bar/experience-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MenuItemDirective } from './directives/menu-item.directive';
     HomeComponent,
     MainMenuComponent,
     MenuItemDirective,
+    ExperienceBarComponent,
   ],
   imports: [
     BrowserModule,
