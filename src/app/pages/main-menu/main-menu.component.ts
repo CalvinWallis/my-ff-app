@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { map, Observable, timer } from 'rxjs';
 import { MenuItemDirective } from 'src/app/directives/menu-item.directive';
 import { MenuService } from 'src/app/services/menu.service';
 
@@ -10,9 +11,17 @@ import { MenuService } from 'src/app/services/menu.service';
 export class MainMenuComponent implements OnInit, AfterViewInit {
   @ViewChildren(MenuItemDirective) menuItems: QueryList<MenuItemDirective> = new QueryList<MenuItemDirective>;
 
-  constructor(private menuService: MenuService) { }
+  dateTime$?: Observable<Date>;
+
+  constructor(private menuService: MenuService) {
+  }
 
   ngOnInit(): void {
+    this.dateTime$ = timer(0, 1000).pipe(
+      map(() => {
+        return new Date();
+      })
+    )
   }
 
   ngAfterViewInit() {
@@ -23,4 +32,6 @@ export class MainMenuComponent implements OnInit, AfterViewInit {
       this.menuItems.first.element.focus();
     })
   }
+
+
 }
