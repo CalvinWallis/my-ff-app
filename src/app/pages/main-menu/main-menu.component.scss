@@ -3,10 +3,12 @@
 :host {
   --stat-bar-width: 165px;
   --party-image-width: 155px;
+  --font-size-default: 2rem;
   display: flex;
   flex-direction: column;
   height: 100%;
   text-shadow: 3px 3px 1px black;
+  font-size: var(--font-size-default);
 }
 
 .layout {
@@ -42,13 +44,18 @@
   grid-area: submenu;
 }
 
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 .layout-location {
   grid-area: location;
 }
 
 .menu-item {
   display: block;
-  font-size: 2rem;
   margin-bottom: 1rem;
   padding-left: 2rem;
   position: relative;
@@ -79,7 +86,6 @@
 .party-member {
   display: flex;
   gap: 2rem;
-  font-size: 2rem;
   margin-bottom: 3.5rem;
 
   &__image {

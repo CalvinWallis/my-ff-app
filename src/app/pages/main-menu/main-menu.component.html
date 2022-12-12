@@ -67,6 +67,9 @@
     <a menu-item class="menu-item">Save</a>
     <a menu-item class="menu-item">Quit</a>
   </app-container>
-  <app-container class="layout-submenu">Submenu</app-container>
+  <app-container class="layout-submenu">
+    <div class="submenu-item">Time <span>{{dateTime$ | async | date: 'HH:mm:ss'}}</span></div>
+    <div class="submenu-item">Gil</div>
+  </app-container>
   <app-container class="layout-location">Location</app-container>
 </div>/
