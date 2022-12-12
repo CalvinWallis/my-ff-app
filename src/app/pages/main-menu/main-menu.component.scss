@@ -13,7 +13,6 @@
 
 .layout {
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(5, 1fr) 5% 15%;
   grid-template-rows: 3% repeat(7, 1fr);
   grid-template-areas: 
