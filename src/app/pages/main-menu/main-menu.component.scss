@@ -54,10 +54,12 @@
 }
 
 .menu-item {
+  color: var(--color-font-menu);
   display: block;
   margin-bottom: 1rem;
   padding-left: 2rem;
   position: relative;
+  text-decoration: none;
 
   &:focus, &:hover {
     outline: none;
