@@ -64,9 +64,14 @@
   }
 
   &:focus::before, &:hover::before {
-    content: '>';
+    content: '';
+    background: url('../../../assets/FFPointerSpriteCropped.png') no-repeat;
+    background-size: contain;
+    display: block;
+    width: 128px;
+    height: 64px;
     position: absolute;
-    left: -.5rem;
+    left: -6rem;
   }
 
   &__break {
