@@ -4,9 +4,8 @@
   --stat-bar-width: 165px;
   --party-image-width: 155px;
   --font-size-default: 2rem;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: block;
+  margin: auto;
   text-shadow: 3px 3px 1px black;
   font-size: var(--font-size-default);
 }
