@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 import { MenuItemDirective } from './directives/menu-item.directive';
 import { ExperienceBarComponent } from './components/experience-bar/experience-bar.component';
+import { PartyMemberComponent } from './components/party-member/party-member.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ExperienceBarComponent } from './components/experience-bar/experience-b
     MainMenuComponent,
     MenuItemDirective,
     ExperienceBarComponent,
+    PartyMemberComponent,
   ],
   imports: [
     BrowserModule,

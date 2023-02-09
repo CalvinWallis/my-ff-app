@@ -1,0 +1,15 @@
+<div class="image" [ngClass]="{'backrow': backrow}">
+  <img src="{{imgSrc}}" height="192">
+</div>
+<div>
+  <span class="name">{{name}}</span>
+  <dl class="stats">
+    <dt>LV</dt><dd>{{level}}</dd>
+    <dt>HP</dt><dd class="stat-hp">{{currentHP}}/<span>{{maxHP}}</span></dd>
+    <dt>MP</dt><dd class="stat-mp">{{currentMP}}/<span>{{maxMP}}</span></dd>
+  </dl>
+</div>
+<div class="progress">
+  <app-experience-bar [experienceLevel]="limitLevel"></app-experience-bar>
+  <app-experience-bar [barType]="'limit'" [experienceLevel]="experienceLevel"></app-experience-bar>
+</div>

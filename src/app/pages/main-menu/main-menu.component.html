@@ -1,57 +1,40 @@
 <div class="layout">
   <app-container class="layout-main">
     <div class="party">
-      <div class="party-member">
-        <div class="party-member__image">
-          <img src="./assets/calvinportrait2.png" height="192">
-        </div>
-        <div>
-          <span class="party-member__name">Calvin</span> 
-          <dl class="party-member__stats">
-            <dt>LV</dt><dd>8</dd>
-            <dt>HP</dt><dd class="party-member__stat-value--HP">341/<span>341</span></dd>
-            <dt>MP</dt><dd class="party-member__stat-value--MP">48/<span>48</span></dd>
-          </dl>
-        </div>
-        <div class="party-member__progress">
-          <app-experience-bar></app-experience-bar>
-          <app-experience-bar [barType]="'limit'" experienceLevel="xp10"></app-experience-bar>
-        </div>
-      </div>
-      <div class="party-member">
-        <div class="party-member__image">
-          <img src="./assets/calvinportrait3.png" height="192">
-        </div>
-        <div>
-          <span class="party-member__name">Calvin</span> 
-          <dl class="party-member__stats">
-            <dt>LV</dt><dd>8</dd>
-            <dt>HP</dt><dd class="party-member__stat-value--HP">341/<span>341</span></dd>
-            <dt>MP</dt><dd class="party-member__stat-value--MP">48/<span>48</span></dd>
-          </dl>
-        </div>
-        <div class="party-member__progress">
-          <app-experience-bar experienceLevel="xp75"></app-experience-bar>
-          <app-experience-bar [barType]="'limit'" experienceLevel="xp65"></app-experience-bar>
-        </div>
-      </div>
-      <div class="party-member">
-        <div class="party-member__image">
-          <img src="./assets/calvinportrait4white.png" height="192">
-        </div>
-        <div>
-          <span class="party-member__name">Calvin</span> 
-          <dl class="party-member__stats">
-            <dt>LV</dt><dd>8</dd>
-            <dt>HP</dt><dd class="party-member__stat-value--HP">341/<span>341</span></dd>
-            <dt>MP</dt><dd class="party-member__stat-value--MP">48/<span>48</span></dd>
-          </dl>
-        </div>
-        <div class="party-member__progress">
-          <app-experience-bar experienceLevel="xp15"></app-experience-bar>
-          <app-experience-bar [barType]="'limit'" experienceLevel="xp100"></app-experience-bar>
-        </div>
-      </div>
+      <app-party-member
+        imgSrc="./assets/calvinportrait2-saturated51.png"
+        name="Calvin"
+        [level]="8"
+        [currentHP]="341"
+        [currentMP]="73"
+        [maxHP]="341"
+        [maxMP]="120"
+        limitLevel="xp50"
+        experienceLevel="xp10"
+      ></app-party-member>
+      <app-party-member
+        imgSrc="./assets/calvinportrait3.png"
+        name="Calvin"
+        [level]="7"
+        [currentHP]="276"
+        [currentMP]="48"
+        [maxHP]="346"
+        [maxMP]="48"
+        [backrow]="true"
+        limitLevel="xp75"
+        experienceLevel="xp65"
+      ></app-party-member>
+      <app-party-member
+        imgSrc="./assets/calvinportrait4white.png"
+        name="Calvin"
+        [level]="8"
+        [currentHP]="413"
+        [currentMP]="24"
+        [maxHP]="413"
+        [maxMP]="30"
+        limitLevel="xp15"
+        experienceLevel="xp100"
+      ></app-party-member>
     </div>
   </app-container>
   <app-container class="layout-menu">

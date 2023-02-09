@@ -1,0 +1,70 @@
+@import "../../../styles/variables.scss";
+
+:host {
+  --stat-bar-width: 165px;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.image {
+  margin: 0 4.875rem 0 0;
+}
+
+.backrow {
+  margin: 0 1rem 0 3.875rem;
+}
+
+.name {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: max-content var(--stat-bar-width);
+
+  & dt {
+    color: $color-blue-light;
+    font-weight: 600;
+  }
+
+  & dd {
+    margin-left: .5rem;
+    margin-bottom: .25rem;
+    padding: 0 .25rem .25rem 1rem;
+    position: relative;
+    
+  }
+
+  & span {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.stat-hp::after {
+  background: linear-gradient(0.25turn, #3775c8, #3775c8, #c4bfc6);
+  content: '';
+  display: block;
+  height: .25rem;
+  left: 0;
+  position: absolute;
+  margin-top: .25rem;
+  width: var(--stat-bar-width);
+}
+
+.stat-mp::after {
+  background: linear-gradient(0.25turn, #53cfad, #53cfad, #bfc3cf);
+  content: '';
+  display: block;
+  height: .25rem;
+  left: 0;
+  margin-top: .25rem;
+  position: absolute;
+  width: var(--stat-bar-width);
+}
+
+.progress {
+  flex-grow: 1;
+}
