@@ -10,6 +10,7 @@ import { MenuItemDirective } from './directives/menu-item.directive';
 import { ExperienceBarComponent } from './components/experience-bar/experience-bar.component';
 import { PartyMemberComponent } from './components/party-member/party-member.component';
 import { AboutComponent } from './pages/about/about.component';
+import { PartyComponent } from './components/party/party.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AboutComponent } from './pages/about/about.component';
     ExperienceBarComponent,
     PartyMemberComponent,
     AboutComponent,
+    PartyComponent,
   ],
   imports: [
     BrowserModule,
