@@ -11,6 +11,7 @@ import { ExperienceBarComponent } from './components/experience-bar/experience-b
 import { PartyMemberComponent } from './components/party-member/party-member.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PartyComponent } from './components/party/party.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PartyComponent } from './components/party/party.component';
     PartyMemberComponent,
     AboutComponent,
     PartyComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

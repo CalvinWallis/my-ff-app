@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PartyComponent } from 'src/app/components/party/party.component';
 import { AboutComponent } from '../about/about.component';
+import { ContactComponent } from '../contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: PartyComponent },
-  { path: 'about', component: AboutComponent, pathMatch: 'full'},
-  { path: 'contact', component: PartyComponent}
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent}
 ];
 
 @NgModule({
