@@ -5,8 +5,10 @@ import { MainMenuRoutingModule } from './pages/main-menu/main-menu-routing.modul
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', component: MainMenuComponent, loadChildren: () => MainMenuRoutingModule },
+  { path: '', component: HomeComponent },
+  { path: 'main-menu', component: MainMenuComponent, loadChildren: () => MainMenuRoutingModule },
+  { path: 'contact', redirectTo: '/main-menu/contact'},
+  { path: 'about', redirectTo: '/main-menu/about'}
 ];
 
 @NgModule({

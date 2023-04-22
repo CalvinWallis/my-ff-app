@@ -7,7 +7,7 @@ import { ContactComponent } from '../contact/contact.component';
 const routes: Routes = [
   { path: '', component: PartyComponent },
   { path: 'about', component: AboutComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent, pathMatch: "prefix"}
 ];
 
 @NgModule({
