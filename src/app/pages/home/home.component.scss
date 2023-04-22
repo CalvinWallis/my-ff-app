@@ -40,3 +40,10 @@ a {
     left: -8rem;
   }
 }
+
+app-container {
+  position: absolute;
+  top: 3rem;
+  left: calc(50% - 350px);
+  width: 700px;
+}
