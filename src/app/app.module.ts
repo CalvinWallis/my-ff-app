@@ -14,23 +14,21 @@ import { PartyComponent } from './components/party/party.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContainerComponent,
-    HomeComponent,
-    MainMenuComponent,
-    MenuItemDirective,
-    ExperienceBarComponent,
-    PartyMemberComponent,
-    AboutComponent,
-    PartyComponent,
-    ContactComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ContainerComponent,
+        HomeComponent,
+        MainMenuComponent,
+        MenuItemDirective,
+        ExperienceBarComponent,
+        PartyMemberComponent,
+        AboutComponent,
+        PartyComponent,
+        ContactComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

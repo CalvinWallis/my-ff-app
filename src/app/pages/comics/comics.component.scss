@@ -1,0 +1,64 @@
+@import "../../../styles/variables.scss";
+
+:host {
+  background-color: $color-background-light;
+  display: block;
+  font-family: $font-family-comics;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+:host.dark-mode {
+  background-color: $color-background-dark;
+  color: white;
+}
+
+header {
+  display: grid;
+  grid-template-areas:  "heading"
+                        "toggle";
+}
+
+.heading {
+  font-size: 6rem;
+  grid-area: heading;
+}
+
+.dark-mode-toggle {
+  grid-area: toggle;
+  text-align: right;
+}
+
+.dark-mode-toggle > * {
+  cursor: pointer;
+}
+
+.content {
+  border: 2px solid black;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.comic-page {
+  display: block;
+  width: 100%;
+}
+
+@media (prefers-color-schem: dark) {
+  :host {
+    background-color: $color-background-dark;
+    color: white;
+  }
+}
+
+@media (min-width: #{$breakpoint-phone + 1}) {
+  .comic-page {
+    width: 700px;
+  }
+
+  header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: '. heading toggle';
+  }
+}

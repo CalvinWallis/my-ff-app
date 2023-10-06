@@ -2,11 +2,17 @@ import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angu
 import { map, Observable, timer } from 'rxjs';
 import { MenuItemDirective } from 'src/app/directives/menu-item.directive';
 import { MenuService } from 'src/app/services/menu.service';
+import { AsyncPipe, DatePipe } from '@angular/common';
+import { MenuItemDirective as MenuItemDirective_1 } from '../../directives/menu-item.directive';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { ContainerComponent } from '../../components/container/container.component';
 
 @Component({
-  selector: 'app-main-menu',
-  templateUrl: './main-menu.component.html',
-  styleUrls: ['./main-menu.component.scss']
+    selector: 'app-main-menu',
+    templateUrl: './main-menu.component.html',
+    styleUrls: ['./main-menu.component.scss'],
+    standalone: true,
+    imports: [ContainerComponent, RouterOutlet, MenuItemDirective_1, RouterLink, AsyncPipe, DatePipe]
 })
 export class MainMenuComponent implements OnInit, AfterViewInit {
   @ViewChildren(MenuItemDirective) menuItems: QueryList<MenuItemDirective> = new QueryList<MenuItemDirective>;

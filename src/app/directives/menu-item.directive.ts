@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[menu-item]'
+    selector: '[menu-item]',
+    standalone: true
 })
 export class MenuItemDirective {
   element: HTMLElement;
