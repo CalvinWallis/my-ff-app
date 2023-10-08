@@ -21,7 +21,7 @@ header {
 }
 
 .heading {
-  font-size: 6rem;
+  font-size: 4rem;
   grid-area: heading;
 }
 
@@ -38,11 +38,33 @@ header {
   border: 2px solid black;
   margin: 0 auto;
   max-width: fit-content;
+  position: relative;
 }
 
 .comic-page {
   display: block;
   width: 100%;
+}
+
+.button {
+  background-color: transparent;
+  bottom: 0;
+  border: none;
+  cursor: pointer;
+  height: 60px;
+  margin: .25rem;
+  position: absolute;
+  width: 60px;
+}
+
+.previous-button {
+  background: center / contain no-repeat url('/assets/BackButton.png');
+  left: 0;
+}
+
+.next-button {
+  background: center / contain no-repeat url('/assets/NextButton.png');
+  right: 0;
 }
 
 @media (prefers-color-schem: dark) {
@@ -60,5 +82,14 @@ header {
   header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: '. heading toggle';
+  }
+
+  .heading {
+    font-size: 6rem;
+  }
+
+  .button {
+    height: 130px;
+    width: 130px;
   }
 }

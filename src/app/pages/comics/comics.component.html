@@ -7,8 +7,8 @@
 </header>
 <div class="content">
   <img class="comic-page" [src]="comicPageSrc">
-</div>
-<div class="controls">
-  <button (click)="previousPage()">< Prev</button>
-  <button (click)="nextPage()">Next ></button>
+  <div class="controls">
+    <button *ngIf="page !== '0'" class="button previous-button" title="previous page" (click)="previousPage()"></button>
+    <button *ngIf="page !== '11'" class="button next-button" title="next page" (click)="nextPage()"></button>
+  </div>
 </div>
