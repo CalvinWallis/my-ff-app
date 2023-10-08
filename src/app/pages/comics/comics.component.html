@@ -6,9 +6,15 @@
   </div>
 </header>
 <div class="content">
-  <img class="comic-page" [src]="comicPageSrc">
+  <img *ngIf="loading === false; else loadingPage" class="comic-page" [src]="comicPageSrc" width="2039" height="2894">
   <div class="controls">
     <button *ngIf="page !== '0'" class="button previous-button" title="previous page" (click)="previousPage()"></button>
     <button *ngIf="page !== '11'" class="button next-button" title="next page" (click)="nextPage()"></button>
   </div>
 </div>
+
+<ng-template #loadingPage>
+  <div class="loading">
+    <span class="loading-icon"></span>
+  </div>
+</ng-template>

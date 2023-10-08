@@ -15,6 +15,7 @@ export class ComicsComponent implements OnInit {
   comic: string | null = 'oks';
   volume: string | null = 'volume1';
   page: string | null = '0';
+  loading: boolean = false;
 
   @HostBinding('class.dark-mode') darkMode: boolean = false;
 
@@ -61,9 +62,11 @@ export class ComicsComponent implements OnInit {
   }
 
   getComicPage(): void {
+    this.loading = true;
     this.comicService
       .getPage(this.comic!, this.volume!, this.page!)
       .subscribe((response) => {
+        this.loading = false;
         if (!!response.data) {
           this.comicPageSrc = response.data.url;
         }
