@@ -12,6 +12,7 @@ import { PartyMemberComponent } from './components/party-member/party-member.com
 import { AboutComponent } from './pages/about/about.component';
 import { PartyComponent } from './components/party/party.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [AppComponent],
@@ -26,7 +27,8 @@ import { ContactComponent } from './pages/contact/contact.component';
         PartyMemberComponent,
         AboutComponent,
         PartyComponent,
-        ContactComponent
+        ContactComponent,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
