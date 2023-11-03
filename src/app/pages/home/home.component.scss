@@ -1,7 +1,8 @@
 @import "../../../styles/variables.scss";
 
 :host {
-  background-color: white;
+  background: hsl(0, 0%, 99%);
+  box-shadow: inset 0 0 40px 5px hsla(0, 0%, 0%, 0.8);
   display: flex;
   flex-direction: column;
   font-family: $font-family-6;
@@ -47,3 +48,4 @@ app-container {
   left: calc(50% - 350px);
   width: 700px;
 }
+
